@@ -1,0 +1,8 @@
+# Ingenieria web 2021/1: Taller NodeJS 
+
+Node JS API that runs with the default mongodb local instance
+
+## Start the project
+1. Run `npm install` to install all dependencies.
+2. Run `npm start` to start the local API.
+3. Run `npm` to start the Supertest and Jest tests.
