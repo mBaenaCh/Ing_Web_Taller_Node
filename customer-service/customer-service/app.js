@@ -6,10 +6,17 @@ var logger = require('morgan');
 
 var app = express();
 
+var MongoDBUtil = require('./modules/mongodb/mongodb.module').MongoDBUtil;
+var CustomerController = require('./modules/customer/customer.module')().CustomerController;
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+
+MongoDBUtil.init();
+
+app.use('/customers', CustomerController);
 
 app.get('/', function (req, res) {
   var pkg = require(path.join(__dirname, 'package.json'));
