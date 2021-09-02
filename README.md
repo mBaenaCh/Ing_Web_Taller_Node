@@ -5,4 +5,3 @@ Node JS API that runs with the default mongodb local instance to make a CRUD of 
 ## Start the project
 1. Run `npm install` to install all dependencies.
 2. Run `npm start` to start the local API.
-3. Run `npm` to start the Supertest and Jest tests.
